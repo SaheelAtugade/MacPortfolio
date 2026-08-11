@@ -1,0 +1,124 @@
+.mail-window {
+  //   width: 100%;
+  overflow-y: auto;
+  padding: 0.5rem;
+  padding-bottom: 4rem;
+  height: 100%;
+  background: #eae9e9;
+  color: #222;
+  font-family: Arial, sans-serif;
+
+  form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mail-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+
+    label {
+      width: 75px;
+      color: #545454;
+      font-size: 14px;
+      // flex-shrink: 0;
+    }
+
+    input {
+      flex: 1;
+      background-color: rgb(247, 246, 246);
+      padding: 0.5rem;
+      border: none;
+      outline: none;
+      border-radius: 5px;
+    //   background: transparent;
+      font-size: 14px;
+      color: #222;
+
+      &::placeholder {
+        color: #aaa;
+      }
+    }
+  }
+
+  .to-email {
+    flex: 1;
+
+    span {
+      display: inline-block;
+      padding: 6px 10px;
+
+      border-radius: 6px;
+      background: #e8e8e8;
+
+      font-size: 13px;
+      color: #545454;
+    }
+  }
+
+  .message-section {
+    flex: 1;
+    border: 1px solid rgba(0, 0, 0, 0.603);
+    display: flex;
+    flex-direction: column;
+    padding: 0.75rem;
+
+    label {
+      font-size: 14px;
+      color: #545454;
+      margin-bottom: 8px;
+    }
+
+    textarea {
+      flex: 1;
+      width: 100%;
+      resize: none;
+      border: none;
+      outline: none;
+      background: transparent;
+      font-size: 14px;
+      line-height: 1.5;
+
+      color: #222;
+
+      &::placeholder {
+        color: #aaa;
+      }
+    }
+    
+  }
+
+  .mail-footer{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        p{
+            font-size: 14px;
+            color: #1f627a;
+        }
+
+        button{
+            margin-top: 0.5rem;
+            background: #1f627a;
+            color: #fff;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+
+            &:hover{
+                background: #2a84a4;
+            }
+            &:active{
+                scale: 0.98;
+            }
+        }
+    }
+
+}
