@@ -2,9 +2,9 @@
   {
     "id": 1,
     "image": "/Projects/PD.png",
-    "title": "Productivy dashboard",
+    "title": "Productivity Dashboard",
     "description": "A productivity dashboard that allows users to use todo lists, daily planners, pomodoro timers, and track their habits.",
-    "tags": ["HTML", "CSS", "JavaScript", "local storage", "async/await", "api"],
+    "tags": ["HTML", "CSS", "JavaScript", "Local Storage", "Async/Await", "API"],
     "repoLink": "https://github.com/SaheelAtugade/Productivity_Dashboard",
     "demoLink": "https://saheelatugade.github.io/Productivity_Dashboard/"
   },
@@ -12,7 +12,7 @@
     "id": 2,
     "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1000",
     "title": "Monthly Budget Planner for Small Organizations and Firms",
-    "description": " A modern PHP + MySQL budget planning app for managing monthly budgets, weekly budgets, income, expenses, and reports.",
+    "description": "A modern PHP + MySQL budget planning app for managing monthly budgets, weekly budgets, income, expenses, and reports.",
     "tags": ["PHP", "MySQL", "HTML", "CSS", "Xampp", "Authentication"],
     "repoLink": "https://github.com/SaheelAtugade/expense-planner",
     "demoLink": null
@@ -20,16 +20,16 @@
   {
     "id": 3,
     "image": "/Projects/alvy.png",
-    "title": "ALVY-STUDIO-RESPONSIVE-WEBSITE",
+    "title": "ALVY Studio Responsive Website",
     "description": "A responsive website clone of ALVY STUDIO, showcasing their portfolio, services, and contact information. Built with HTML and SCSS",
     "tags": ["HTML", "SCSS", "Responsive", "Bootstrap"],
-    "repoLink": "https://github.com/django/django",
+    "repoLink": "https://github.com/SaheelAtugade/alvy-studio-responsive-website",
     "demoLink": "https://responsive-alvy-studio.netlify.app"
   },
   {
     "id": 4,
     "image": "/Projects/MacPortfolio.png",
-    "title": "MacOs sytle portfolio website",
+    "title": "macOS Style Portfolio Website",
     "description": "A macOS-style portfolio website built with React, SCSS showcasing projects and skills in a visually appealing manner.",
     "tags": ["React", "SCSS", "API", "npm packages", "Context API"],
     "repoLink": "https://github.com/SaheelAtugade/macOS-Portfolio",

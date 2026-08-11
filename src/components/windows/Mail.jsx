@@ -3,9 +3,8 @@ import "./mail.scss";
 import MacWindow from "./MacWindow";
 import emailjs from "@emailjs/browser";
 
-
 const Mail = () => {
-  const [successMssg, setSuccessMssg] = useState("");
+  const [statusMessage, setStatusMessage] = useState("");
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -13,33 +12,39 @@ const Mail = () => {
     message: "",
   });
 
-const ServiceID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
-const TemplateID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
-const PublicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
-
+  const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+  const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+  const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
   const form = useRef();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setSuccessMssg("sending email...");
+    setStatusMessage("Sending email...");
+
+    if (!serviceId || !templateId || !publicKey) {
+      setStatusMessage("Email service is not configured right now. Please try again later.");
+      return;
+    }
+
     emailjs
-      .sendForm(ServiceID, TemplateID, form.current, {
-        publicKey: PublicKey,
+      .sendForm(serviceId, templateId, form.current, {
+        publicKey,
       })
       .then(
         () => {
-          setSuccessMssg("Email has been sent successfully...");
+          setStatusMessage("Email sent successfully.");
           setFormData({ name: "", email: "", subject: "", message: "" });
         },
         (error) => {
           console.log("FAILED...", error);
-          setSuccess(false);
+          setStatusMessage("Could not send the email. Please try again.");
         },
-      ).finally(() => {
+      )
+      .finally(() => {
         setTimeout(() => {
-          setSuccessMssg("");
+          setStatusMessage("");
         }, 3000);
-        });
+      });
   };
 
   return (
@@ -69,13 +74,8 @@ const PublicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
             />
           </div>
 
-          <input
-            type="hidden"
-            name="time"
-            value={new Date().toLocaleString()}
-          />
+          <input type="hidden" name="time" value={new Date().toLocaleString()} />
 
-          {/* NAME */}
           <div className="mail-row">
             <label>Name:</label>
 
@@ -91,7 +91,6 @@ const PublicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
             />
           </div>
 
-          {/* SUBJECT */}
           <div className="mail-row">
             <label>Subject:</label>
 
@@ -107,7 +106,6 @@ const PublicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
             />
           </div>
 
-          {/* MESSAGE */}
           <div className="message-section">
             <label>Message:</label>
 
@@ -122,10 +120,9 @@ const PublicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
             />
           </div>
 
-          {/* FOOTER */}
           <div className="mail-footer">
             <button type="submit">Send</button>
-            <p>{successMssg}</p>
+            <p>{statusMessage}</p>
           </div>
         </form>
       </div>
