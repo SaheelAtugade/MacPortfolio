@@ -3,6 +3,7 @@ import "./mail.scss";
 import MacWindow from "./MacWindow";
 import emailjs from "@emailjs/browser";
 
+
 const Mail = () => {
   const [successMssg, setSuccessMssg] = useState("");
   const [formData, setFormData] = useState({
@@ -12,9 +13,9 @@ const Mail = () => {
     message: "",
   });
 
-  const ServiceID = "service_3j3zp3g";
-  const TemplateID = "template_3ya460r";
-  const PublicKey = "pccYrHlftah6hB3NN";
+const ServiceID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+const TemplateID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+const PublicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
   const form = useRef();
 
