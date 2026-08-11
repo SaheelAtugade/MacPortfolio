@@ -28,20 +28,11 @@
   },
   {
     "id": 4,
-    "image": "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&q=80&w=1000",
+    "image": "/Projects/MacPortfolio.png",
     "title": "MacOs sytle portfolio website",
     "description": "A macOS-style portfolio website built with React, SCSS showcasing projects and skills in a visually appealing manner.",
     "tags": ["React", "SCSS", "API", "npm packages", "Context API"],
     "repoLink": "https://github.com/SaheelAtugade/macOS-Portfolio",
-    "demoLink": "https://saheelatugade.github.io/macOS-Portfolio/"
-  },
-  {
-    "id": 5,
-    "image": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=1000",
-    "title": "TerminalX - CLI Productivity Tool",
-    "description": "A command-line interface tool built to automate repetitive developer tasks and manage local environments efficiently.",
-    "tags": ["Rust", "Clap", "Tokio", "System API"],
-    "repoLink": "https://github.com/rust-lang/rust",
-    "demoLink": null
+    "demoLink": "https://saheel-macportfolio.netlify.app/"
   }
 ]
